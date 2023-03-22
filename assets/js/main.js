@@ -29,7 +29,7 @@ function criaTarefa(textoInput){
 function criaBotaoApagar(li){
     li.innerText += ' '
     const botaoApagar = document.createElement('button');
-    botaoApagar.innerText = 'Apagar';
+    botaoApagar.innerText = 'Apagar Tarefa';
     botaoApagar.setAttribute('class','apagar');
     botaoApagar.setAttribute('title', 'apagar esta tarefa?');
     li.appendChild(botaoApagar);
@@ -76,14 +76,17 @@ adicionaTarefasSalvas();
 
 // EVENTOS:
 
-
+// monitora o click do ouse no documento
 document.addEventListener('click', function(e){
     const el = e.target;
+    // verifica se o objeto clicado tem a class apagar
     if(el.classList.contains('apagar')){
+        // apaga o elemento pai do objeto que tem a clss apagar
         el.parentElement.remove();
         slavarTarefas();
     }
 });
+// 
 inputTarefa.addEventListener('keypress', function(e){
     if (e.keyCode === 13){
         criaTarefa(inputTarefa.value);

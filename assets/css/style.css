@@ -25,34 +25,29 @@ body {
   padding: 20px;
   border-radius: 10px;
 }
-
-form input, form label, form button {
-  display: block;
-  width: 100%;
-  margin-bottom: 10px;
+input{
+  width: 80%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(80, 80, 80);
+   
 }
-
-form input {
-  font-size: 24px;
-  height: 50px;
-  padding: 0 20px;
+input:focus{
+  border-color: black;
 }
-
-form input:focus {
-  outline: 1px solid var(--primary-color);
-}
-
-form button {
+button{
+  color: white;
   border: none;
-  background: var(--primary-color);
-  color: #fff;
-  font-size: 18px;
-  font-weight: 700;
-  height: 50px;
-  cursor: pointer;
-  margin-top: 30px;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: green;
 }
-
-form button:hover {
-  background: var(--primary-color-darker);
+ul > li{
+  margin-left: 50px;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+.apagar{
+  background-color: red;
 }

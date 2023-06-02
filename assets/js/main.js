@@ -52,12 +52,16 @@ function slavarTarefas(){
 }
 
 function adicionaTarefasSalvas(){
+try {
     const tarefas = localStorage.getItem('tarefas');
     const listaDeTarefas = JSON.parse(tarefas);
     
     for(let tarefa of listaDeTarefas){
         criaTarefa(tarefa);
     }
+}catch(e){
+    console.log(e)
+}
 }
 
 
